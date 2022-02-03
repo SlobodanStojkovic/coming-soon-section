@@ -54,14 +54,135 @@
       url("../fonts/josefin-sans-v20-latin-600.svg#JosefinSans") format("svg"); /* Legacy iOS */
 }
 
-html {
-  font-size: 16px;
-}
-
 $linearPink: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
 $dark: #423a3a;
 $cream: #ce9898;
 $pink: #ee8b8b;
 $white: #ffffff;
+$logoCircleColor: #d8d8d8;
+$logoTextColor: #6d728b;
+$reddish: #f96464;
 
+html {
+  font-size: 16px;
+}
 
+.container {
+  width: 375px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  padding: 0px 32px;
+
+  &__circle-wrapper {
+    color: $logoCircleColor;
+    font-size: 48px;
+  }
+
+  &__text {
+    color: $logoTextColor;
+    font-family: "Josefin Sans";
+    font-weight: 600;
+    word-break: break-all;
+    align-self: center;
+    padding-left: 10px;
+  }
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.coming-soon-section {
+  &__title {
+    &__first {
+      color: $cream;
+      font-family: Josefin Sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 10.8254px;
+      padding: 32px 32px 0;
+    }
+
+    &__second {
+      font-family: Josefin Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 10.8254px;
+      color: $dark;
+    }
+  }
+
+  &__text {
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: $cream;
+    padding: 16px 32px 0;
+  }
+
+  &__email {
+    &__input {
+      border: 2px solid $reddish;
+      box-sizing: border-box;
+      border-radius: 28px;
+      margin: auto;
+      display: block;
+      font-family: Josefin Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 28px;
+      color: $dark;
+      width: 311px;
+      height: 48px;
+      background: url(../img/arrow-mobile.svg) no-repeat right -20px top -6px;
+      margin: 32px auto;
+      
+      &::placeholder {
+        color: $reddish;
+        padding: 11px 24px 9px;
+      }
+
+      @media (min-width: 768px) {
+        font-family: Josefin Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        mix-blend-mode: normal;
+        border: 1px solid #ce9898;
+        box-sizing: border-box;
+        border-radius: 28px;
+        background: url(../img/arrow-desktop.svg) no-repeat right -20px top -6px;
+        width: 445px;
+        height: 56px;
+      }
+    }
+
+    &__warning {
+      text-align: center;
+      font-family: Josefin Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 13px;
+      color: $reddish;
+      display: none;
+    }
+  }
+}

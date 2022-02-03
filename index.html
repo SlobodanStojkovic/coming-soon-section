@@ -9,9 +9,12 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="header">
         <div class="header__circle-wrapper">O</div>
-        <div class="header__text">BASE APPAREL</div>
+        <div class="header__text">
+          BASE <br />
+          APPAREL
+        </div>
       </header>
       <div class="image-wrapper">
         <picture class="image-wrapper__image">
@@ -37,19 +40,7 @@
           launch deals.
         </div>
         <div class="coming-soon-section__email">
-          <div class="coming-soon-section__email__text"></div>
-          <div class="coming-soon-section__email__arrow">
-            <picture class="coming-soon-section__email__arrow__image">
-              <source
-                media="(max-width: 767px )"
-                srcset="./src/img/arrow-mobile.svg"
-              />
-              <source
-                media="(min-width: 768px )"
-                srcset="./src/img/arrow-desktop.svg"
-              />
-              <img src="./src/img/arrow-desktop.svg" alt="arrow to the right" />
-            </picture>
+          <input class="coming-soon-section__email__input" type="text" placeholder="Email Address">
           </div>
           <div class="coming-soon-section__email__warning">
             Please provide a valid email
