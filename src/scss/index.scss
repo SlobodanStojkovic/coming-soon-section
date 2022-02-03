@@ -70,11 +70,23 @@ html {
 .container {
   width: 375px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "a a a a a a b b b b"
+      "a a a a a a b b b b"
+      "c c c c c c b b b b"
+      "c c c c c c b b b b"
+      "c c c c c c b b b b"
+      "c c c c c c b b b b";
+  }
 }
 
 .header {
   display: flex;
-  padding: 0px 32px;
 
   &__circle-wrapper {
     color: $logoCircleColor;
@@ -89,6 +101,12 @@ html {
     align-self: center;
     padding-left: 10px;
   }
+
+  @media (min-width: 768px) {
+    grid-area: a;
+    align-self: start;
+    padding: 0px 165px;
+  }
 }
 
 .image-wrapper {
@@ -96,6 +114,15 @@ html {
   justify-content: center;
   width: 100%;
   height: auto;
+
+  @media (min-width: 768px) {
+    grid-area: b;
+    grid-column-end: none;
+
+    & img {
+      height: 100vh;
+    }
+  }
 }
 
 .coming-soon-section {
@@ -110,6 +137,14 @@ html {
       text-align: center;
       letter-spacing: 10.8254px;
       padding: 32px 32px 0;
+
+      @media (min-width: 768px) {
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: 17.3206px;
+        text-align: left;
+        padding: 0;
+      }
     }
 
     &__second {
@@ -121,6 +156,13 @@ html {
       text-align: center;
       letter-spacing: 10.8254px;
       color: $dark;
+
+      @media (min-width: 768px) {
+        font-size: 64px;
+        line-height: 71px;
+        letter-spacing: 17.3206px;
+        text-align: left;
+      }
     }
   }
 
@@ -133,6 +175,13 @@ html {
     text-align: center;
     color: $cream;
     padding: 16px 32px 0;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: left;
+      padding: 32px 0;
+    }
   }
 
   &__email {
@@ -152,7 +201,8 @@ html {
       height: 48px;
       background: url(../img/arrow-mobile.svg) no-repeat right -20px top -6px;
       margin: 32px auto;
-      
+      padding-left: 30px;
+
       &::placeholder {
         color: $reddish;
         padding: 11px 24px 9px;
@@ -172,6 +222,12 @@ html {
         width: 445px;
         height: 56px;
       }
+
+      @media (min-width: 768px) {
+        margin: 0;
+        max-width: 445px;
+        width: 100%;
+      }
     }
 
     &__warning {
@@ -184,5 +240,11 @@ html {
       color: $reddish;
       display: none;
     }
+  }
+
+  @media (min-width: 768px) {
+    grid-area: c;
+    padding: 165px;
+    max-width: 445px;
   }
 }
