@@ -9,57 +9,55 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <div class="header__circle-wrapper">O</div>
-        <div class="header__text">
-          BASE <br />
-          APPAREL
-        </div>
-      </header>
-      <div class="image-wrapper">
-        <picture class="image-wrapper__image">
-          <source
-            media="(max-width: 767px )"
-            srcset="./src/img/woman-mobile.svg"
-          />
-          <source
-            media="(min-width: 768px )"
-            srcset="./src/img/woman-desktop.svg"
-          />
-          <img src="./src/img/woman-desktop.svg" alt="woman" />
-        </picture>
-      </div>
-      <div class="coming-soon-section">
-        <div class="coming-soon-section__title">
-          <div class="coming-soon-section__title__first">WE'RE</div>
-          <div class="coming-soon-section__title__second">COMING SOON</div>
-        </div>
-        <div class="coming-soon-section__text">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </div>
-        <div class="coming-soon-section__email">
-          <input
-            class="coming-soon-section__email__input"
-            type="text"
-            placeholder="Email Address"
-          />
-          <div class="coming-soon-section__email__div">
-            <img
-              class="coming-soon-section__email__error hidden"
-              src="./src/img/error.png"
-              alt="error"
+      <div class="header-and-coming-soon-container">
+        <header class="header">
+          <img class="header__img" src="./src/img/logo.png" alt="logo" />
+        </header>
+        <div class="image-wrapper">
+          <picture class="image-wrapper__image">
+            <source
+              media="(max-width: 767px )"
+              srcset="./src/img/woman-mobile.svg"
             />
-            <img
-              class="coming-soon-section__email__button"
-              src="./src/img/arrow-mobile.svg"
-              alt="button"
+            <source
+              media="(min-width: 768px )"
+              srcset="./src/img/woman-desktop.svg"
             />
+            <img src="./src/img/woman-desktop.svg" alt="woman" />
+          </picture>
+        </div>
+        <div class="coming-soon-section">
+          <div class="coming-soon-section__title">
+            <div class="coming-soon-section__title__first">WE'RE</div>
+            <div class="coming-soon-section__title__second">COMING SOON</div>
           </div>
+          <div class="coming-soon-section__text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </div>
+          <div class="coming-soon-section__email">
+            <input
+              class="coming-soon-section__email__input"
+              type="text"
+              placeholder="Email Address"
+            />
+            <div class="coming-soon-section__email__div">
+              <img
+                class="coming-soon-section__email__error hidden"
+                src="./src/img/error.png"
+                alt="error"
+              />
+              <img
+                class="coming-soon-section__email__button"
+                src="./src/img/arrow-mobile.svg"
+                alt="button"
+              />
+            </div>
 
-          <div class="coming-soon-section__email__warning hidden">
-            Please provide a valid email
+            <div class="coming-soon-section__email__warning hidden">
+              Please provide a valid email
+            </div>
           </div>
         </div>
       </div>
