@@ -63,8 +63,24 @@ $logoCircleColor: #d8d8d8;
 $logoTextColor: #6d728b;
 $reddish: #f96464;
 
-html {
-  font-size: 16px;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
 }
 
 .container {
@@ -87,6 +103,7 @@ html {
 
 .header {
   display: flex;
+  padding-left: 30px;
 
   &__circle-wrapper {
     color: $logoCircleColor;
@@ -105,22 +122,39 @@ html {
   @media (min-width: 768px) {
     grid-area: a;
     align-self: start;
-    padding: 0px 165px;
+    padding: 0 0 0 5px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 0 0 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 0 0 135px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 0 0 0 250px;
   }
 }
 
 .image-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 
   @media (min-width: 768px) {
     grid-area: b;
     grid-column-end: none;
 
     & img {
-      height: 100vh;
+      width: 100%;
+
+      @media (min-width: 1200px) {
+        height: 100vh;
+      }
     }
   }
 }
@@ -186,7 +220,7 @@ html {
 
   &__email {
     &__input {
-      border: 2px solid $reddish;
+      border: 2px solid $cream;
       box-sizing: border-box;
       border-radius: 28px;
       margin: auto;
@@ -204,7 +238,7 @@ html {
       padding-left: 30px;
 
       &::placeholder {
-        color: $reddish;
+        color: $cream;
         padding: 11px 24px 9px;
       }
 
@@ -221,6 +255,11 @@ html {
         background: url(../img/arrow-desktop.svg) no-repeat right -20px top -6px;
         width: 445px;
         height: 56px;
+
+        &:hover {
+          background: url(../img/arrow-desktop-hover.svg) no-repeat right -20px top -6px;
+          cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+        }
       }
 
       @media (min-width: 768px) {
@@ -244,7 +283,7 @@ html {
 
   @media (min-width: 768px) {
     grid-area: c;
-    padding: 165px;
     max-width: 445px;
+    justify-self: center;
   }
 }
