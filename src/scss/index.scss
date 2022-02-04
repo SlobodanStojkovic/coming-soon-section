@@ -61,6 +61,7 @@ $pink: #ee8b8b;
 $white: #ffffff;
 $logoCircleColor: #d8d8d8;
 $reddish: #f96464;
+$josefinSans: "Josefin Sans";
 
 * {
   box-sizing: border-box;
@@ -147,7 +148,7 @@ body {
   &__title {
     &__first {
       color: $cream;
-      font-family: Josefin Sans;
+      font-family: $josefinSans;
       font-style: normal;
       font-weight: 300;
       font-size: 40px;
@@ -166,7 +167,7 @@ body {
     }
 
     &__second {
-      font-family: Josefin Sans;
+      font-family: $josefinSans;
       font-style: normal;
       font-weight: 600;
       font-size: 40px;
@@ -185,7 +186,7 @@ body {
   }
 
   &__text {
-    font-family: Josefin Sans;
+    font-family: $josefinSans;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -212,7 +213,7 @@ body {
       border-radius: 28px;
       margin: auto;
       display: block;
-      font-family: Josefin Sans;
+      font-family: $josefinSans;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
@@ -229,7 +230,7 @@ body {
       }
 
       @media (min-width: 768px) {
-        font-family: Josefin Sans;
+        font-family: $josefinSans;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -246,7 +247,7 @@ body {
 
     &__warning {
       text-align: center;
-      font-family: Josefin Sans;
+      font-family: $josefinSans;
       font-style: normal;
       font-weight: normal;
       font-size: 13px;
