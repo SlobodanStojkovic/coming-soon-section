@@ -219,6 +219,9 @@ body {
   }
 
   &__email {
+    display: flex;
+    flex-direction: column;
+
     &__input {
       border: 2px solid $cream;
       box-sizing: border-box;
@@ -233,7 +236,6 @@ body {
       color: $dark;
       width: 311px;
       height: 48px;
-      background: url(../img/arrow-mobile.svg) no-repeat right -20px top -6px;
       margin: 32px auto;
       padding-left: 30px;
 
@@ -252,14 +254,8 @@ body {
         border: 1px solid #ce9898;
         box-sizing: border-box;
         border-radius: 28px;
-        background: url(../img/arrow-desktop.svg) no-repeat right -20px top -6px;
         width: 445px;
         height: 56px;
-
-        &:hover {
-          background: url(../img/arrow-desktop-hover.svg) no-repeat right -20px top -6px;
-          cursor: url(../img/pointer-hand.svg) 4 4, pointer;
-        }
       }
 
       @media (min-width: 768px) {
@@ -277,7 +273,41 @@ body {
       font-size: 13px;
       line-height: 13px;
       color: $reddish;
-      display: none;
+    }
+
+    &__div {
+      height: 48px;
+      display: flex;
+      align-self: center;
+      position: relative;
+      right: -112px;
+      top: -83px;
+
+      @media (min-width: 768px) {
+        right: -174px;
+        top: -61px;
+      }
+    }
+
+    &__error {
+      width: 24px;
+      height: 24px;
+      align-self: center;
+      position: relative;
+      top: 8px;
+    }
+
+    &__button {
+      height: 83px;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+      }
+
+      @media (min-width: 768px) {
+        height: 100px;
+      }
     }
   }
 
@@ -286,4 +316,12 @@ body {
     max-width: 445px;
     justify-self: center;
   }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.error {
+  border: 2px solid $reddish;
 }
