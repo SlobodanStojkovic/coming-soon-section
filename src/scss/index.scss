@@ -87,13 +87,13 @@ body {
   width: 375px;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1180px) {
     width: auto;
   }
 }
 
 .header-and-coming-soon-container {
-  @media (min-width: 768px) {
+  @media (min-width: 1180px) {
     padding: 0px 0px 10px 168px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -111,7 +111,7 @@ body {
   display: flex;
   padding: 33px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1180px) {
     grid-area: a;
     align-self: start;
     padding: 80px 0px 140px 0px;
@@ -130,7 +130,7 @@ body {
   justify-content: flex-end;
   gap: 10px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1180px) {
     grid-area: b;
     grid-column-end: none;
 
@@ -157,7 +157,7 @@ body {
       letter-spacing: 10.8254px;
       padding: 32px 32px 0;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1180px) {
         font-size: 64px;
         line-height: 64px;
         letter-spacing: 17.3206px;
@@ -176,7 +176,7 @@ body {
       letter-spacing: 10.8254px;
       color: $dark;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1180px) {
         font-size: 64px;
         line-height: 71px;
         letter-spacing: 17.3206px;
@@ -195,7 +195,7 @@ body {
     color: $cream;
     padding: 16px 32px 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1180px) {
       font-size: 16px;
       line-height: 28px;
       text-align: left;
@@ -229,7 +229,7 @@ body {
         padding: 11px 24px 9px;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1180px) {
         font-family: $josefinSans;
         font-style: normal;
         font-weight: normal;
@@ -263,7 +263,7 @@ body {
       right: -112px;
       top: -83px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1180px) {
         right: -162px;
         top: -61px;
       }
@@ -285,13 +285,13 @@ body {
         cursor: url(../img/pointer-hand.svg) 4 4, pointer;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1180px) {
         height: 100px;
       }
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1180px) {
     grid-area: c;
     max-width: 445px;
     justify-self: start;
