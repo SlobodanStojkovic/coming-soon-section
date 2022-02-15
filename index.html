@@ -9,58 +9,51 @@
   </head>
   <body>
     <div class="container">
-      <div class="header-and-coming-soon-container">
-        <header class="header">
-          <img class="header__img" src="./src/img/logo.png" alt="logo" />
-        </header>
-        <div class="image-wrapper">
-          <picture class="image-wrapper__image">
-            <source
-              media="(max-width: 1179px )"
-              srcset="./src/img/woman-mobile.svg"
-            />
-            <source
-              media="(min-width: 1180px )"
-              srcset="./src/img/woman-desktop.svg"
-            />
-            <img src="./src/img/woman-desktop.svg" alt="woman" />
-          </picture>
+      <div class="image-wrapper">
+        <picture class="image-wrapper__image">
+          <source
+            media="(max-width: 767px )"
+            srcset="./src/img/woman-mobile.svg"
+          />
+          <source
+            media="(min-width: 768px )"
+            srcset="./src/img/woman-desktop.svg"
+          />
+          <img src="./src/img/woman-desktop.svg" alt="woman" />
+        </picture>
+      </div>
+
+      <header class="header">
+        <img class="header__img" src="./src/img/logo.svg" alt="logo" />
+      </header>
+
+      <section class="coming-soon">
+        <div class="coming-soon__title">
+          <div class="coming-soon__title__first">WE'RE</div>
+          <div class="coming-soon__title__second">COMING SOON</div>
         </div>
-        <div class="coming-soon-section">
-          <div class="coming-soon-section__title">
-            <div class="coming-soon-section__title__first">WE'RE</div>
-            <div class="coming-soon-section__title__second">COMING SOON</div>
-          </div>
-          <div class="coming-soon-section__text">
-            Hello fellow shoppers! We're currently building our new fashion
-            store. Add your email below to stay up-to-date with announcements
-            and our launch deals.
-          </div>
-          <div class="coming-soon-section__email">
+        <div class="coming-soon__text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </div>
+
+        <form action="#" method="#" class="email-form" novalidate>
+          <div class="form-inner">
             <input
-              class="coming-soon-section__email__input"
-              type="text"
+              type="email"
+              class="email-input"
               placeholder="Email Address"
             />
-            <div class="coming-soon-section__email__div">
-              <img
-                class="coming-soon-section__email__error hidden"
-                src="./src/img/error.png"
-                alt="error"
-              />
-              <img
-                class="coming-soon-section__email__button"
-                src="./src/img/arrow-mobile.svg"
-                alt="button"
-              />
-            </div>
 
-            <div class="coming-soon-section__email__warning hidden">
-              Please provide a valid email
-            </div>
+            <button type="submit" class="email-submit">
+              <span class="arrowRight"></span>
+            </button>
+            <span class="warning-icon"> ! </span>
           </div>
-        </div>
-      </div>
+          <div class="error-div"></div>
+        </form>
+      </section>
     </div>
 
     <script src="./dist/js/index.js" defer></script>
