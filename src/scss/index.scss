@@ -54,7 +54,7 @@
       url("../fonts/josefin-sans-v20-latin-600.svg#JosefinSans") format("svg"); /* Legacy iOS */
 }
 
-$linearPink: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+$linearPink: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
 $dark: #423a3a;
 $cream: #ce9898;
 $pink: #ee8b8b;
@@ -100,6 +100,12 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: $linearPink;
+
+  @media (min-width: 768px) {
+    background: url(../img/wavy-pattern-top-left.svg) no-repeat;
+    background-size: 100vh;
+  }
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -152,6 +158,18 @@ select {
     grid-template-rows: 1fr 3fr;
     width: auto;
     padding: 0 0 0 30px;
+
+    &::after {
+      content: "";
+      background: url(../img/wavy-pattern-bottom-right.svg) no-repeat;
+      background-size: cover;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      bottom: 0;
+      left: 33%;
+      z-index: -1;
+    }
   }
 
   @media (min-width: 1440px) {
